@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/cate/cate",
+    "pages/coll/coll",
+    "pages/menuList/menuList"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f98602",
+    "navigationBarTitleText": "菜谱主页",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#002233",
+    "selectedColor": "#ff3300",
+    "borderStyle": "white",
+    "backgroundColor": "#eee",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home-icon.png",
+        "selectedIconPath": "images/home-sele.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "分类",
+        "iconPath": "images/cate-icon.png",
+        "selectedIconPath": "images/cate-sele.png"
+      },
+      {
+        "pagePath": "pages/coll/coll",
+        "text": "我的菜谱",
+        "iconPath": "images/coll-icon.png",
+        "selectedIconPath": "images/coll-sele.png"
+      }
+    ]
+  }
+}
