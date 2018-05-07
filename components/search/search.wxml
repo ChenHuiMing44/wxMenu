@@ -1,0 +1,44 @@
+<view class='root-node'>
+  <view class='search-button-box' bindtap='clickSearch'>
+    
+    <image src='/images/search-icon.png'/>
+    
+    <text>搜菜谱、食材</text>
+    
+  </view>
+  <view hidden="{{detailHidden}}" class='search-detail-box'>
+    <view class='search-box'>
+      <view class='input-box'>
+        <input placeholder='想吃什么在这里搜，如黄焖鸡' 
+        bindconfirm="querySearch" value='{{searchInput}}' bindinput='searchInput'
+        focus='{{inputFocus}}' confirm-type='search' id='srarch-input'></input>
+        <view class='clear-input' bindtap='clearInput'>X</view>
+        <view class='search-icon'><image src='/images/search-icon.png'></image></view>
+      </view>
+      <view class="search-cancel" bindtap='cancelSearch'>取消</view>
+    </view>
+    <view class='hot-search-modal'>
+      <view class='title-view'>
+        <text>热门搜索</text>
+      </view>
+      <view class='hot-content'>
+        <text wx:for="{{hotSearchList}}" 
+        data-value="{{item}}" bindtap='clickHotSearch' 
+        class='hot-ele'>{{item}}</text>
+      </view>
+    </view>
+
+    <view class='history-search-box' wx:if="{{hitorySratchList.length>0}}">
+      <view class='title-view'>
+        <text>最近搜索</text>
+        <text bindtap='clearHistory' class='clear-history'>清空</text>
+      </view>
+      <view>
+        <view class='history-cell' wx:for="{{hitorySratchList}}">
+          <navigator url='{{item.url}}'>{{item.value}}</navigator>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
