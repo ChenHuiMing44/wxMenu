@@ -1,10 +1,13 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/menuList/menuList",
     "pages/cate/cate",
-    "pages/coll/coll",
-    "pages/menuList/menuList"
     
+    
+    "pages/coll/coll",
+    
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

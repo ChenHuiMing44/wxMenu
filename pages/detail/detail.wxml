@@ -1,0 +1,42 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <view class='top-img-box'>
+    <image src='{{topImg}}'></image>
+  </view>
+  <view class='name-coll-box'>
+    <text>{{title}}</text>
+    <button bindtap='tipColl' disabled='{{!canColl}}'>收藏</button>
+  </view>
+  <view class='container'>
+    <view class='imtro-box'>
+      <text>{{imtro}}</text>
+    </view>
+    <view class='ingredients-box'>
+      <view class="ingredient-title">
+        <text>用料</text>
+      </view>
+      <block wx:for="{{ingredients}}">
+        <view class='ingredient-item'>
+          <text class='material'>{{item.material}}</text>
+          <text class='amount'>{{item.amount}}</text>
+        </view>
+      </block>
+      <text class='burden-text'>其他辅料：{{burden}}</text>
+    </view>
+
+    <view class='step-box'>
+      <view class='step-title'><text>做法</text></view>
+      <block wx:for="{{steps}}">
+        <view class='step-item'>
+          <view class='step-text'>
+            <text>{{item.step}}</text>
+          </view>
+          <view class='step-img'>
+            <image src='{{item.img}}'></image>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+

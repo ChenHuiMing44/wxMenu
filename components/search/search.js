@@ -67,19 +67,29 @@ Component({
     },
     navigatePage:function(value){
       var url = "/pages/menuList/menuList" + "?menu=" + value;
+      var bo = false;
       wx.getStorage({
         key: 'hitorySratchList',
         success: function(res) {
           var data = res.data;
-          console.log(data);
-          data.unshift({
-            "value":value,
-            "url":url,
-          })
-          wx.setStorage({
-            key: 'hitorySratchList',
-            data: data,
-          })
+          
+          for(var obj in data){
+            if (data[obj].value==value){
+              bo = true;
+            }
+          }
+          if(!bo){
+            data.unshift({
+              "value": value,
+              "url": url,
+            })
+            wx.setStorage({
+              key: 'hitorySratchList',
+              data: data,
+            })
+          }
+          
+          
         },
         fail:function(){
           var data = [{
@@ -104,14 +114,17 @@ Component({
               "inputFocus": false,
             })
             //然后因为缓存的问题给本页面的数据也存上  //到时候把这个该进成对象
-            var da = self.data.hitorySratchList || [];
-            da.unshift({
-              "value": value,
-              "url": url,
-            })
-            self.setData({
-              hitorySratchList: da
-            }) 
+            if(!bo){
+              var da = self.data.hitorySratchList || [];
+              da.unshift({
+                "value": value,
+                "url": url,
+              })
+              self.setData({
+                hitorySratchList: da
+              }) 
+            }
+            
           },500)
           //清空界面数据，以免返回时候还是搜索界面
           

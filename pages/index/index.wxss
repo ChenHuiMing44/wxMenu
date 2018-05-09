@@ -1,3 +1,71 @@
 .container{
   padding: 0 20rpx;
 }
+.index-swiper{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 300rpx;
+}
+.index-swiper image{
+  height: 300rpx;
+  width: 710rpx;
+} 
+.home-cate-box{
+  margin: 20rpx 0;
+  overflow: hidden;
+  width: 755rpx;
+  background-color: #fff;
+  position: relative;
+  left: rpx;
+  right: -2rpx;
+}
+.home-cate-box navigator,.home-cate-box text{
+  float: left;
+  width: 187rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #ddd;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  color: #666;
+}
+.fine-food-box{
+  background-color: #fff;
+  padding: 20rpx;
+}
+.fine-title-box text{
+  font-size: 35rpx;
+  color: #666;
+}
+.fine-food-item{
+  padding: 20rpx 0;
+  height: 400rpx;
+  
+  position: relative;
+}
+.fine-food-item image{
+  width: 100%;
+  height: 100%;
+}
+.fine-food-item .fine-food-name{
+  position: absolute;
+  top: 100rpx;
+  left: 80rpx;
+  right: 80rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 37rpx;
+  color: #fff;
+}
+.fine-food-item .fine-food-tag{
+  position: absolute;
+  top: 200rpx;
+  left: 80rpx;
+  right: 80rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 37rpx;
+  color: #fff;
+}

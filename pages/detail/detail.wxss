@@ -1,0 +1,93 @@
+/* pages/detail/detail.wxss */
+.container{
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+.top-img-box{
+  width: 750rpx;
+  /* padding: 0 20rpx; */
+  padding-bottom: 10rpx;
+}
+.top-img-box image{
+  width: 100%;
+}
+.name-coll-box{
+  background-color: #fff;
+  padding: 60rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.name-coll-box text{
+  font-size: 35rpx;
+  line-height: 80rpx;
+  color: #333;
+}
+.name-coll-box button{
+  background-color: #f96602;
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 240rpx;
+  color: #fff;
+  font-size: 30rpx;
+}
+.imtro-box{
+  padding: 30rpx 0;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  
+}
+.imtro-box text{
+  text-align: left;
+}
+.ingredients-box{
+  width: 710rpx;
+}
+.ingredients-box .ingredient-title{
+  border-bottom: 1rpx solid #ddd;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.ingredients-box .ingredient-title text{
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.ingredients-box .ingredient-item{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.ingredients-box .ingredient-item .material{
+  float: left;
+  color: #666;
+  font-size: 30rpx;
+}
+.ingredients-box .ingredient-item .amount{
+  float: right;
+  color: #666;
+  font-size: 30rpx;
+  margin-right: 160rpx;
+}
+.burden-text{
+  font-size: 30rpx;
+  line-height: 50rpx;
+  padding: 10rpx 0;
+}
+.step-box{
+  margin-top: 30rpx;
+  width: 710rpx;
+}
+.step-title text{
+  line-height: 60rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.step-item{
+  padding: 20rpx 0;
+}
+.step-item .step-text{
+  font-size: 30rpx;
+  padding: 10rpx 0;
+}
+.step-item .step-img{
+  padding-left: 40rpx;
+}

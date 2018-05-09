@@ -27,6 +27,7 @@
   right: 0;
   bottom: 0;
   background-color: #fff;
+  z-index: 1000;
 }
 .search-box{
   height: 60rpx;

@@ -1,2 +1,22 @@
-<!--pages/menuList/menuList.wxml-->
-<text>pages/menuList/menuList.wxml</text>
+<!-- pages/menuList/menuList.wxml -->
+<view class='container'>
+  <view class='menuList'>
+    <block wx:for="{{menuList}}">
+      <view class='menu-item' bindtap='tapToDetail' data-id-value="{{item.id}}">
+        <view class='item-image-box'><image src='{{item.albums[0]}}'></image></view>
+        <view class='item-cont-box'>
+          <view class='name-box'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='item-burden-box'>
+            <text>{{item.burden}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="loading-more" hidden="{{!LoadingMore}}">——— 正在载入更多…… ———</view>
+  <view class="loading-more" hidden="{{!noMore}}">——— 我也是有底线的 ———</view>  
+  <view hidden='{{!noData}}' class="nodata-view">好像没有数据哦....</view>
+  <loading hidden="{{loadingHidden}}">加载中...</loading>
+</view>

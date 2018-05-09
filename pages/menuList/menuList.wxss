@@ -1,1 +1,57 @@
 /* pages/menuList/menuList.wxss */
+.container{
+  
+}
+.menu-item{
+  height: 160rpx;
+  padding: 20rpx;
+  width: 710rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #ddd;
+  
+}
+.item-image-box{
+  height: 160rpx;
+  width: 240rpx;
+  float: left;
+}
+.item-image-box image{
+  height: 100%;
+  width: 100%;
+}
+.item-cont-box{
+  float: left;
+  width: 380rpx;
+  margin-left: 20rpx;
+  height: 160rpx;
+}
+.item-cont-box .name-box{
+  height: 70rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.item-cont-box .item-burden-box{
+  font-size: 26rpx;
+  line-height: 45rpx;
+  color: #999;
+  height: 90rpx;
+  overflow: hidden;
+  
+}
+.loading-more{
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.loading-more button{
+  border: none;
+  outline: none;
+}
+.nodata-view{
+  font-size: 35rpx;
+  margin-top: 200rpx;
+  color: #999;
+}

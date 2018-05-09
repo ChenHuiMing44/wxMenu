@@ -1,2 +1,16 @@
 <!--pages/cate/cate.wxml-->
-<text>pages/cate/cate.wxml</text>
+<view class='container'>
+  <view class='left-nav'>
+    <block wx:for="{{cateList}}">
+      <view class='cate-item {{index==selectItm?"active":""}}' data-index-value="{{index}}" bindtap='tapCate'>{{item.name}}</view>
+    </block>
+  </view>
+  <view class='cate-content'>
+    <block wx:for="{{selectArr}}">
+      <view class='cont-item' data-id-value="{{item.id}}" data-name="{{item.name}}" bindtap='tapNavigate'>
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+</view>
+<loading hidden="{{loadingHidden}}"></loading>

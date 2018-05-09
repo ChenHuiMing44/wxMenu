@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    collList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var collList = wx.getStorageSync("coll");
+    this.setData({
+      collList:collList
+    })
   },
 
   /**
@@ -62,5 +65,28 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  //点击进入详情页
+  collDetail:function(event){
+    var url = "/pages/detail/detail?id=" + event.currentTarget.dataset.idValue;
+    wx.navigateTo({
+      url: url,
+    })
+  },
+  //点击删除收藏
+  tapDelete:function(event){
+    var id = event.currentTarget.dataset.idValue;
+    var coll = this.data.collList;
+    if(coll){
+      for(var index in coll){
+        if(coll[index].id == id){
+          coll.splice(index,1);
+          break;
+        }
+      }
+    }
+    this.setData({
+      collList:coll
+    })
   }
 })

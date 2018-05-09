@@ -1,4 +1,35 @@
 <!--index.wxml-->
-<view class='container'>
-  <search></search>
+<view>
+  <view class='container'>
+    <search></search>
+    <swiper class='index-swiper' autoplay='true' indicator-dots='true' indicator-color='rgba(40,160,100,0.3)'>
+      <block wx:for="{{swiper}}">
+        <swiper-item>
+          <navigator url='{{item.url}}'>
+            <image src='{{item.imgUrl}}'></image>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+
+   <view class='home-cate-box'>
+      <block wx:for="{{cateList}}">
+        <navigator url='{{item.url}}' >{{item.value}}</navigator>
+      </block>
+        <text bindtap='switchToCate' >更多</text>
+    </view>
+    <view class='fine-food-box'>
+      <view class='fine-title-box'>
+        <text>精品菜单</text>
+      </view>
+      <block wx:for="{{fineFoodList}}">
+        <view class='fine-food-item' bindtap='tapFindFoot' data-id-value='{{item.id}}' data-name='{{item.name}}'>
+          <image src="{{item.img}}"></image>
+          <text class='fine-food-name'>{{item.name}}</text>
+          <text class='fine-food-tag'>{{item.text}}</text>
+        </view>
+      </block>
+    </view>
 </view>
